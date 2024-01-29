@@ -11,6 +11,7 @@ export default function Skills() {
         { name: "SQL" },
         { name: "HTML" },
         { name: "CSS/Scss" },
+        { name: "BEM" },
       ],
     },
     {
@@ -27,10 +28,10 @@ export default function Skills() {
     {
       title: "Tools",
       skills: [
+        { name: "MongoDB" },
+        { name: "MySql" },
         { name: "AWS" },
         { name: "Git & Github" },
-        { name: "MySql" },
-        { name: "DBeaver" },
         { name: "Jest" },
         { name: "Postman" },
       ],

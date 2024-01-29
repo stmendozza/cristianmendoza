@@ -8,28 +8,30 @@ import blomi from "../assets/img/blomi.png"
 export default function Project() {
   const projects = [
     {
-      title: "Comercia en linea",
-      position: "Full Stack Developer",
+      title: "Comercia en linea (Trade Online)",
+      position: "Analyst - Designer - Full Stack Developer - Tester - Devops - WaterBoy",
       description:
-        "Migración y desarrollo frontend con React JS, recepción de entregas de requerimientos, validación y propuestas de diseño para mejorar al sistema en desarrollo.",
+        "Analysis, design, development, implementation, testing, maintenance and support, this project is my author and I created it in order to go through different phases of software development learning and fully maintaining my general knowledge of the software development life cycle software.",
       image: comercia_en_linea,
       stack: [
-        { name: "Vue - Nuxt" },
+        { name: "Vue" },
+        { name: "Nuxt" },
         { name: "Vuetify" },
-        { name: "Node" },
+        { name: "Express" },
         { name: "MongoDB" },
+        { name: "Figma" },
       ],
     },
     {
       title: "Blomi - Inside",
       position: "Full Stack Developer",
       description:
-        "Migración y desarrollo frontend con React JS, recepción de entregas de requerimientos, validación y propuestas de diseño para mejorar al sistema en desarrollo.",
+        "Development of inside, a system for the administrative management of the Parking International company that is developed at the same time as other technological proposals such as end customer App, operator App, corporate client platform.",
       image: blomi,
       stack: [
         { name: "Vue" },
-        { name: "Vuetify" },
-        { name: "Node" },
+        { name: "Vuex" },
+        { name: "Express" },
         { name: "AWS" },
         { name: "DynamoDB" },
       ],
@@ -37,9 +39,9 @@ export default function Project() {
     
     {
       title: "Bia",
-      position: "Full Stack Developer",
+      position: "Front End Developer",
       description:
-        "Migración y desarrollo frontend con React JS, recepción de entregas de requerimientos, validación y propuestas de diseño para mejorar al sistema en desarrollo.",
+        "Migration and frontend development with React JS, receipt of requirements submissions, validation and design proposals to improve the system under development.",
       image: bia,
       stack: [
         { name: "React" },
@@ -49,14 +51,16 @@ export default function Project() {
     },
     {
       title: "Qinspecting",
-      position: "Full Stack Developer",
+      position: "Front End Developer",
       description:
-        "Migración y desarrollo frontend con React JS, recepción de entregas de requerimientos, validación y propuestas de diseño para mejorar al sistema en desarrollo.",
+        "General style adjustments due to UI/UX restructuring, in addition to implementation of modules such as notifications, training, adjustment in the authentication module and creation of the service website.",
       image: qinpecting,
       stack: [
-        { name: "Vue - Quasar" },
-        { name: "Node - Express" },
-        { name: "MySQL" },
+        { name: "Vue" },
+        { name: "Quasar" },
+        { name: "Vuex" },
+        { name: "Flutter" },
+        { name: "XD" }
       ],
     },
     
@@ -64,7 +68,7 @@ export default function Project() {
 
   return (
     <Box id="projects">
-      <Typography className="projects__h2">Projectos</Typography>
+      <Typography className="projects__h2">Projects</Typography>
       <Grid container spacing={2} >
         {projects.map((project, index) => (
           <Box sx={{ flexGrow: 1 }} key={index} className="projects__box">
@@ -84,7 +88,7 @@ export default function Project() {
                     {project.title}
                   </Typography>
                   <Typography variant="body2" className="projects__p">
-                    {project.description}
+                   <b>{project.position}</b> |  {project.description}
                   </Typography>
                   <Box className="projects__stack">
                     {project.stack.map((item, index) => (

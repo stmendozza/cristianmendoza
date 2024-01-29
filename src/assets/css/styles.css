@@ -19,7 +19,7 @@ html {
 .main {
   display: flex !important;
   margin: auto;
-  padding: 25px;
+  margin: 25px;
   max-width: 1800px !important;
 }
 
@@ -27,6 +27,12 @@ html {
   .main {
     padding: 0 100px;
   }
+}
+
+#pre-header {
+  background: #0074d9 !important;
+  height: 20px;
+  width: 100%;
 }
 
 /* Header */
@@ -39,6 +45,9 @@ html {
 }
 
 /* Title */
+.title {
+  padding: 0 !important;
+}
 
 .title img {
   display: flex;
@@ -99,12 +108,24 @@ html {
   .header2 {
     display: none !important;
   }
+  .about__h1 {
+    margin-top: 0px !important;
+  }
 }
 
 /* About */
 
+.about__botton-group {
+  margin-bottom: 20px !important;
+}
+
+.about__botton {
+  margin-right: 5px !important;
+  color: #000;
+}
+
 .about__h1 {
-  margin-top: 50px !important;
+  margin-top: 40px !important;
   font-size: 45px !important;
   font-weight: bolder !important;
   color: var(--color-text) !important;
@@ -116,7 +137,7 @@ html {
 
   font-weight: bolder;
   color: var(--color-text-light);
-  margin-bottom: 20px !important;
+  margin-bottom: 10px !important;
 }
 
 .about__p {
@@ -228,9 +249,25 @@ html {
   .title img {
     max-width: 300px;
   }
+
   /* .projects__grid {
     display: inline !important;
   } */
+}
+
+@media screen and (min-width: 1200px) {
+  /* Header */
+  .title img {
+    position: fixed;
+    display: flex;
+    margin: auto;
+    top: 15%;
+    left: 5% !important;
+  }
+
+  .floating {
+    position: fixed;
+  }
 }
 
 @keyframes show {
@@ -254,6 +291,27 @@ html {
   animation-timeline: --image;
   animation-name: show;
 
-  animation-range: entry 25% cover 25%;
+  animation-range: entry 25% cover 30%;
   animation-fill-mode: both;
+}
+
+.floating {
+  animation-name: floating !important;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
 }
