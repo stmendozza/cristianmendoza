@@ -1,6 +1,7 @@
 // import * as React from "react";
 // import styled from "@mui/material/styles/styled";
 import {
+  Avatar,
   Container,
   Button,
   Box,
@@ -9,6 +10,9 @@ import {
   //  Switch
 } from "@mui/material";
 import { SpaceBar } from "@mui/icons-material";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useTranslation } from "react-i18next";
+import Logo from "../assets/img/logo.png";
 
 // const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 //   width: 62,
@@ -58,12 +62,13 @@ import { SpaceBar } from "@mui/icons-material";
 // }));
 
 const pages = [
-  { name: "About", id: "#about" },
-  { name: "Experience", id: "#experience" },
-  { name: "Projects", id: "#projects" },
+  { key: "menu.about", id: "#about" },
+  { key: "menu.experience", id: "#experience" },
+  { key: "menu.projects", id: "#projects" },
 ];
 
 function ResponsiveAppBar() {
+  const { t } = useTranslation();
   // const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   // const handleOpenNavMenu = (event) => {
@@ -88,10 +93,10 @@ function ResponsiveAppBar() {
       >
         <Toolbar disableGutters>
           {/* Desktop */}
-          {/* <Avatar
+          <Avatar
             src={Logo}
             sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
-          ></Avatar> */}
+          ></Avatar>
           <SpaceBar sx={{ flexGrow: 1 }} />
           {/* <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -146,7 +151,7 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
-                key={page.name}
+                key={page.key}
                 href={page.id}
                 // onClick={handleCloseNavMenu}
                 sx={{
@@ -156,9 +161,12 @@ function ResponsiveAppBar() {
                   textTransform: "capitalize",
                 }}
               >
-                {page.name}
+                {t(page.key)}
               </Button>
             ))}
+          </Box>
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            <LanguageSwitcher />
           </Box>
 
           {/* <FormGroup color="secondary" sx={{ justifySelf: "end" }}>

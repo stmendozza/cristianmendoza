@@ -1,0 +1,82 @@
+{
+  "menu": {
+    "about": "Acerca de",
+    "skills": "Habilidades",
+    "experience": "Experiencia",
+    "projects": "Proyectos"
+  },
+  "about": {
+    "name": "Cristian Mendoza",
+    "role": "Desarrollador Full Stack en Appears",
+    "bio1": "Desde 2016 ingresé al mundo del desarrollo de software, siempre tuve gusto por la tecnología y gran curiosidad por los sitios web y cómo funcionan.",
+    "bio2": "Actualmente trabajo como desarrollador Full Stack, utilizando tecnologías como Vue.js, Vuetify, Node.js, JavaScript, MongoDB, AWS y Amazon DynamoDB. Mi principal responsabilidad es llevar a cabo la implementación del proyecto según sus requisitos y el diseño previamente acordado.",
+    "bio3": "Mi enfoque siempre es enfrentar cualquier reto con el mayor nivel de compromiso, proponiendo soluciones que marquen la diferencia. Me gusta contribuir con algo valioso y que cada miembro del equipo se sienta cómodo trabajando conmigo en la creación de soluciones."
+  },
+  "switcher": {
+    "es": "Español",
+    "en": "Inglés"
+  },
+  "skills": {
+    "title": "Habilidades",
+    "categories": {
+      "languages": "Lenguajes",
+      "frameworks": "Frameworks",
+      "tools": "Herramientas",
+      "design": "Diseño"
+    }
+  },
+  "experience": {
+    "title": "Experiencia",
+    "items": {
+      "parking": {
+        "title": "Desarrollador Full Stack",
+        "company": "Parking International",
+        "description": "Como desarrollador Full Stack me encontré con el reto de trabajar sin los requisitos definidos como tal y en un sistema que aparentemente llevaba de 2 a 3 años en desarrollo, pero por reprocesos y cambios nunca se había logrado llegar a una primera versión. Siendo el único desarrollador haciendo front y back, con ayuda de otros backs y trabajando con diagramas de flujo, reuniones con el equipo y stakeholders, logramos obtener un MVP en un periodo de 6 meses, tras lo cual el equipo tomó mejores decisiones para el proyecto.",
+        "date": "Mayo 2023 - Presente"
+      },
+      "macarenia": {
+        "title": "Desarrollador Frontend",
+        "company": "Macarenia Corp",
+        "description": "Migración y desarrollo frontend con React JS, recepción de requerimientos, validación y propuestas de diseño para mejorar el sistema en desarrollo.",
+        "date": "Feb 2023 - May 2023"
+      },
+      "appears": {
+        "title": "Desarrollador Frontend",
+        "company": "Appears",
+        "description": "Desarrollar y reestructurar sistemas a medida, páginas web y landing pages para clientes y la propia empresa, además de apoyar esporádicamente el diseño de interfaces de usuario o rediseño de módulos del sistema y la app de la empresa.",
+        "date": "Octubre 2020 - Marzo 2023"
+      },
+      "eltiempo": {
+        "title": "Desarrollador de Software",
+        "company": "El Tiempo Casa Editorial",
+        "description": "Mis funciones fueron apoyar bases de datos, crear ETL's y migrar ETL's de una versión de Visual Studio a otra, pruebas de aplicaciones de EL TIEMPO CASA EDITORIAL, carga en bases de datos de pruebas y producción, diseño y desarrollo de interfaces de usuario.",
+        "date": "Diciembre 2020 - Junio 2020"
+      }
+    }
+  },
+  "projects": {
+    "title": "Proyectos",
+    "items": {
+      "comercia": {
+        "title": "Comercia en línea",
+        "position": "Analista - Diseñador - Desarrollador Full Stack - Tester - Devops - WaterBoy",
+        "description": "Análisis, diseño, desarrollo, implementación, pruebas, mantenimiento y soporte. Este proyecto es de mi autoría y lo creé con el fin de pasar por diferentes fases de aprendizaje del desarrollo de software y mantener actualizado mi conocimiento del ciclo de vida del desarrollo de software."
+      },
+      "blomi": {
+        "title": "Blomi - Inside",
+        "position": "Desarrollador Full Stack",
+        "description": "Desarrollo de Inside, un sistema para la gestión administrativa de la empresa Parking International, desarrollado en paralelo con otras propuestas tecnológicas como App para cliente final, App de operador, plataforma de cliente corporativo."
+      },
+      "bia": {
+        "title": "Bia",
+        "position": "Desarrollador Front End",
+        "description": "Migración y desarrollo frontend con React JS, recepción de requerimientos, validación y propuestas de diseño para mejorar el sistema en desarrollo."
+      },
+      "qinspecting": {
+        "title": "Qinspecting",
+        "position": "Desarrollador Front End",
+        "description": "Ajustes generales de estilos por reestructuración de UI/UX, además de implementación de módulos como notificaciones, capacitación, ajuste en el módulo de autenticación y creación del sitio web del servicio."
+      }
+    }
+  }
+}

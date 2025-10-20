@@ -7,43 +7,21 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import CircleIcon from "@mui/icons-material/Circle";
 import Typography from "@mui/material/Typography";
+import { useTranslation } from "react-i18next";
 
 export default function Experience() {
+  const { t } = useTranslation();
   const experience = [
-    {
-      title: "Full Stack Developer",
-      company: "Parking International",
-      description:
-        "As a Full Stack developer I have found the challenge of working without the requirements defined as such and in a system that had apparently been in development for 2 to 3 years, but due to reprocessing and changes it had never been possible to reach a first version, me as the only developer doing front and back, with the help of other backs and working based on flow charts, meetings with the team and stakeholders, we have managed to get an MVP in a period of 6 months, after the team was making better decisions for the project.",
-      date: "May 2023 - Present",
-    },
-    {
-      title: "Frontend Developer",
-      company: "Macarenia Corp",
-      description:
-        "Migration and frontend development with React JS, receipt of requirements submissions, validation and design proposals to improve the system under development.",
-      date: "Feb 2023 - May 2023",
-    },
-    {
-      title: "Frontend Developer",
-      company: "Appears",
-      description:
-        "Develop and restructure custom systems, web pages and landing pages for clients and the company itself, as well as sporadically support the design of user interfaces or redesign of system modules and the company's app.",
-      date: "October 2020 - March 2023",
-    },
-    {
-      title: "Software Developer",
-      company: "El Tiempo Casa Editorial",
-      description:
-        "My functions were to support databases, create ETL's and migrate ETL's from one version of Visual Studio to another, test EL TIEMPO CASA EDITORIAL applications, load into test and production databases, design and development. . of user interfaces.",
-      date: "December 2020 - June 2020",
-    },
+    t("experience.items.parking", { returnObjects: true }),
+    t("experience.items.macarenia", { returnObjects: true }),
+    t("experience.items.appears", { returnObjects: true }),
+    t("experience.items.eltiempo", { returnObjects: true }),
   ];
 
   return (
     <div id="experience">
       <Typography variant="h2" className="experience__h2">
-        Experience
+        {t("experience.title")}
       </Typography>
       <Timeline
         sx={{

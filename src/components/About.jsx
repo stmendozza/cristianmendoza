@@ -4,8 +4,10 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { useTranslation } from "react-i18next";
 
 export default function About() {
+  const { t } = useTranslation();
   const githubUrl = 'https://github.com/stmendozza';
   const instagramUrl = 'https://www.instagram.com/cris.mendoza.77/';
   const linkedInUrl = 'https://www.linkedin.com/in/stmendozza/';
@@ -14,10 +16,10 @@ export default function About() {
   return (
     <div id="about">
       <Typography variant="h1" className="about__h1 ">
-        Cristian Mendoza
+        {t('about.name')}
       </Typography>
       <Typography variant="h2" className="about__h2">
-        Full Stack Developer at Appears
+        {t('about.role')}
       </Typography>
       <ButtonGroup className="about__botton-group" >
         <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="about__botton">
@@ -34,13 +36,13 @@ export default function About() {
         </a>
       </ButtonGroup>
       <Typography variant="body2" gutterBottom className="about__p">
-      Since 2016 I entered the world of software development, I always had a taste for technology, as well as a lot of curiosity about websites and how they work.
+        {t('about.bio1')}
       </Typography>
       <Typography variant="body2" gutterBottom className="about__p">
-      I currently work as a Full Stack developer, using technologies such as Vue.js, Vuetify, Node.js, JavaScript, MongoDB, AWS and Amazon DynamoDB. My main responsibility is to carry out the implementation of the project according to its requirements and the previously agreed design.
+        {t('about.bio2')}
       </Typography>
       <Typography variant="body2" gutterBottom className="about__p">
-      My focus is always on facing any challenge with the highest level of commitment, making proposals to meet each solution so that they make a difference. I really like being able to contribute something good and that each member of the team feels comfortable working with me in creating solutions.
+        {t('about.bio3')}
       </Typography>
     </div>
   );

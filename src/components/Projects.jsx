@@ -4,14 +4,13 @@ import qinpecting from "../assets/img/qinpecting.png"
 import bia from "../assets/img/bia.png"
 import comercia_en_linea from "../assets/img/comercia_en_linea.png"
 import blomi from "../assets/img/blomi.png"
+import { useTranslation } from "react-i18next";
 
 export default function Project() {
+  const { t } = useTranslation();
   const projects = [
     {
-      title: "Comercia en linea (Trade Online)",
-      position: "Analyst - Designer - Full Stack Developer - Tester - Devops - WaterBoy",
-      description:
-        "Analysis, design, development, implementation, testing, maintenance and support, this project is my author and I created it in order to go through different phases of software development learning and fully maintaining my general knowledge of the software development life cycle software.",
+      ...t("projects.items.comercia", { returnObjects: true }),
       image: comercia_en_linea,
       stack: [
         { name: "Vue" },
@@ -23,10 +22,7 @@ export default function Project() {
       ],
     },
     {
-      title: "Blomi - Inside",
-      position: "Full Stack Developer",
-      description:
-        "Development of inside, a system for the administrative management of the Parking International company that is developed at the same time as other technological proposals such as end customer App, operator App, corporate client platform.",
+      ...t("projects.items.blomi", { returnObjects: true }),
       image: blomi,
       stack: [
         { name: "Vue" },
@@ -36,12 +32,8 @@ export default function Project() {
         { name: "DynamoDB" },
       ],
     },
-    
     {
-      title: "Bia",
-      position: "Front End Developer",
-      description:
-        "Migration and frontend development with React JS, receipt of requirements submissions, validation and design proposals to improve the system under development.",
+      ...t("projects.items.bia", { returnObjects: true }),
       image: bia,
       stack: [
         { name: "React" },
@@ -50,10 +42,7 @@ export default function Project() {
       ],
     },
     {
-      title: "Qinspecting",
-      position: "Front End Developer",
-      description:
-        "General style adjustments due to UI/UX restructuring, in addition to implementation of modules such as notifications, training, adjustment in the authentication module and creation of the service website.",
+      ...t("projects.items.qinspecting", { returnObjects: true }),
       image: qinpecting,
       stack: [
         { name: "Vue" },
@@ -63,12 +52,11 @@ export default function Project() {
         { name: "XD" }
       ],
     },
-    
   ];
 
   return (
     <Box id="projects">
-      <Typography className="projects__h2">Projects</Typography>
+      <Typography className="projects__h2">{t("projects.title")}</Typography>
       <Grid container spacing={2} >
         {projects.map((project, index) => (
           <Box sx={{ flexGrow: 1 }} key={index} className="projects__box">
