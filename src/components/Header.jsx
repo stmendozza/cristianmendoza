@@ -97,7 +97,7 @@ function ResponsiveAppBar() {
             src={Logo}
             sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
           ></Avatar>
-          <SpaceBar sx={{ flexGrow: 1 }} />
+          <SpaceBar />
           {/* <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -156,7 +156,7 @@ function ResponsiveAppBar() {
                 // onClick={handleCloseNavMenu}
                 sx={{
                   my: 2,
-                  color: "black",
+                  color: "var(--color-text)",
                   display: "block",
                   textTransform: "capitalize",
                 }}

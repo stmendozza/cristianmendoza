@@ -50,8 +50,8 @@ html {
 }
 
 .title img {
-  display: flex;
-  margin: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .title h1 {
@@ -141,6 +141,7 @@ html {
 }
 
 .about__p {
+  margin-top: 40px !important;
   font-size: 14px !important;
   margin-bottom: 15px !important;
   color: var(--color-text);
@@ -247,7 +248,7 @@ html {
 
 @media screen and (max-width: 575px) {
   .title img {
-    max-width: 300px;
+    max-width: 220px;
   }
 
   /* .projects__grid {
@@ -257,17 +258,18 @@ html {
 
 @media screen and (min-width: 1200px) {
   /* Header */
-  .title img {
-    position: fixed;
-    display: flex;
-    margin: auto;
-    top: 15%;
-    left: 5% !important;
-  }
+}
 
-  .floating {
-    position: fixed;
-  }
+/* Professional title photo */
+.title__photo {
+  margin-top: 50px;
+  max-width: 100px;
+  /* width: 60%; */
+  /* height: auto; */
+  /* display: block; */
+  /* margin: 0 auto 20px auto; */
+  border-radius: 8px;
+  /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); */
 }
 
 @keyframes show {
