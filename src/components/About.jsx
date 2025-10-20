@@ -17,7 +17,7 @@ export default function About() {
         Cristian Mendoza
       </Typography>
       <Typography variant="h2" className="about__h2">
-        Full Stack Developer at Parking International
+        Full Stack Developer at Appears
       </Typography>
       <ButtonGroup className="about__botton-group" >
         <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="about__botton">
