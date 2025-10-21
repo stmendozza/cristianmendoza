@@ -85,19 +85,19 @@
     "items": {
       "empresa_a": {
         "company": "Parking International",
-        "description": "Software development team."
+        "description": "Software development team Parking Go."
       },
       "empresa_b": {
         "company": "Parking International",
-        "description": "Software development team."
+        "description": "Software development team with external developers."
       },
       "empresa_c": {
         "company": "Parking International",
-        "description": "Administrative team and TI."
+        "description": "Software development team bootcamp."
       },
       "empresa_d": {
         "company": "Parking International",
-        "description": "Technology team."
+        "description": "Administrative and TI team."
       }
     }
   }
