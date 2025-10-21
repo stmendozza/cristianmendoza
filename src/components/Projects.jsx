@@ -5,9 +5,12 @@ import bia from "../assets/img/bia.png"
 import comercia_en_linea from "../assets/img/comercia_en_linea.png"
 import blomi from "../assets/img/blomi.png"
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
 
 export default function Project() {
   const { t } = useTranslation();
+  const [loadedImages, setLoadedImages] = useState({});
+  
   const projects = [
     {
       ...t("projects.items.comercia", { returnObjects: true }),
@@ -54,6 +57,10 @@ export default function Project() {
     },
   ];
 
+  const handleImageLoad = (index) => {
+    setLoadedImages(prev => ({ ...prev, [index]: true }));
+  };
+
   return (
     <Box id="projects">
       <Typography className="projects__h2">{t("projects.title")}</Typography>
@@ -62,13 +69,17 @@ export default function Project() {
           <Box sx={{ flexGrow: 1 }} key={index} className="projects__box">
             <Grid container spacing={{xs: 2}} >           
               <Grid item xs={12} sm={4}>
-                {/* <Card className="projects__card" > */}
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="projects__img"
-                  />
-                {/* </Card> */}
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="projects__img"
+                  loading="lazy"
+                  onLoad={() => handleImageLoad(index)}
+                  style={{ 
+                    opacity: loadedImages[index] ? 1 : 0,
+                    transition: 'opacity 0.3s ease-in-out'
+                  }}
+                />
               </Grid>
               <Grid item xs={12} sm={8}>
                 <Box >

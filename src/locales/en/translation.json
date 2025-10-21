@@ -78,5 +78,27 @@
         "description": "General style adjustments due to UI/UX restructuring, in addition to implementation of modules such as notifications, training, adjustment in the authentication module and creation of the service website."
       }
     }
+  },
+  "teams": {
+    "title": "Work Teams",
+    "description": "I have had the privilege of working with incredible teams in different companies, where we have achieved successful projects and learned together.",
+    "items": {
+      "empresa_a": {
+        "company": "Parking International",
+        "description": "Software development team."
+      },
+      "empresa_b": {
+        "company": "Parking International",
+        "description": "Software development team."
+      },
+      "empresa_c": {
+        "company": "Parking International",
+        "description": "Administrative team and TI."
+      },
+      "empresa_d": {
+        "company": "Parking International",
+        "description": "Technology team."
+      }
+    }
   }
 }

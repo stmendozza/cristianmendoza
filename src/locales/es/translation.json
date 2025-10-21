@@ -78,5 +78,27 @@
         "description": "Ajustes generales de estilos por reestructuración de UI/UX, además de implementación de módulos como notificaciones, capacitación, ajuste en el módulo de autenticación y creación del sitio web del servicio."
       }
     }
+  },
+  "teams": {
+    "title": "Equipos de Trabajo",
+    "description": "He tenido el privilegio de trabajar con equipos increíbles en diferentes empresas, donde hemos logrado proyectos exitosos y aprendido juntos.",
+    "items": {
+      "empresa_a": {
+        "company": "Parking International",
+        "description": "Equipo de desarrollo de software."
+      },
+      "empresa_b": {
+        "company": "Parking International",
+        "description": "Equipo de desarrollo de software."
+      },
+      "empresa_c": {
+        "company": "Parking International",
+        "description": "Equipo administrativo y TI."
+      },
+      "empresa_d": {
+        "company": "Parking International",
+        "description": "Equipo de tecnología."
+      }
+    }
   }
 }

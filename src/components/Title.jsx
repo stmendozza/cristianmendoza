@@ -5,10 +5,13 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
 import myPhoto from "../assets/img/cristian_mendoza.png";
 
 export default function Title() {
   const { t } = useTranslation();
+  const [imageLoaded, setImageLoaded] = useState(false);
+  
   const githubUrl = 'https://github.com/stmendozza';
   const instagramUrl = 'https://www.instagram.com/cris.mendoza.77/';
   const linkedInUrl = 'https://www.linkedin.com/in/stmendozza/';
@@ -18,7 +21,17 @@ export default function Title() {
     <Box>
       <Grid container spacing={2}>
         <Grid item xs={12} sm={12} md={2}>
-          <img src={myPhoto} alt={t('about.name')} className="title__photo" />
+          <img 
+            src={myPhoto} 
+            alt={t('about.name')} 
+            className="title__photo"
+            loading="lazy"
+            onLoad={() => setImageLoaded(true)}
+            style={{ 
+              opacity: imageLoaded ? 1 : 0,
+              transition: 'opacity 0.3s ease-in-out'
+            }}
+          />
         </Grid>
         <Grid item xs={12} sm={12} md={10}>
           <Typography variant="h1" className="about__h1 ">

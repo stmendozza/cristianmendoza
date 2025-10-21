@@ -134,16 +134,16 @@ html {
 .about__h2 {
   font-size: 18px !important;
   letter-spacing: 0.1px !important;
-
   font-weight: bolder;
   color: var(--color-text-light);
   margin-bottom: 10px !important;
 }
 
 .about__p {
-  margin-top: 40px !important;
+  margin-top: 25px !important;
   font-size: 14px !important;
   margin-bottom: 15px !important;
+  margin-right: 40px !important;
   color: var(--color-text);
 }
 
@@ -227,13 +227,6 @@ html {
   font-size: 13px !important;
 }
 
-.projects__card {
-  /* background: var(--color-light-grey) !important; */
-  /* min-width: 150px !important; */
-  /* margin-right: 15px; */
-  /* height: 80px !important; */
-}
-
 .projects__box {
   margin-bottom: 30px !important;
 }
@@ -272,48 +265,214 @@ html {
   /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); */
 }
 
+/* Remove unused animations and optimize CSS */
 @keyframes show {
   from {
     opacity: 0;
-    scale: 25%;
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
-    scale: 100%;
+    transform: translateY(0);
   }
 }
+
+/* Optimize animations with will-change */
 #about,
 #skills,
 #experience,
 #projects,
-#my_photo_img {
-  view-timeline-name: --image;
-  view-timeline-axis: block;
-
-  animation-timeline: --image;
-  animation-name: show;
-
-  animation-range: entry 25% cover 30%;
-  animation-fill-mode: both;
+.title__photo {
+  animation: show 0.6s ease-out;
+  will-change: transform, opacity;
 }
 
+/* Remove unused floating animation */
 .floating {
-  animation-name: floating !important;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  margin-left: 30px;
-  margin-top: 5px;
+  animation: none;
 }
 
-@keyframes floating {
-  0% {
-    transform: translate(0, 0px);
+/* Teams Section */
+.teams {
+  margin: 50px 0 !important;
+}
+
+.teams__h2 {
+  font-size: 20px !important;
+  font-weight: bolder !important;
+  margin-bottom: 30px !important;
+  color: var(--color-text) !important;
+}
+
+.teams__carousel-container {
+  position: relative;
+  width: 100%;
+
+  margin: 0 auto;
+}
+
+.teams__card {
+  margin: 0 auto;
+  max-width: 600px;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+  overflow: hidden !important;
+}
+
+.teams__image {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.teams__card-content {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%) !important;
+  padding: 20px !important;
+}
+
+.teams__company-name {
+  font-size: 13px !important;
+  font-weight: bold !important;
+  margin-bottom: 8px !important;
+  color: var(--color-text) !important;
+}
+
+.teams__description {
+  font-size: 13px !important;
+  color: var(--color-text-light) !important;
+  line-height: 1.4 !important;
+}
+
+.teams__nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: var(--color-text) !important;
+  z-index: 10;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.teams__nav-button:hover {
+  background: white !important;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.teams__nav-button--left {
+  left: 16px;
+}
+
+.teams__nav-button--right {
+  right: 16px;
+}
+
+.teams__indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: -25px;
+  padding: 0 10px;
+  padding-bottom: 10px;
+}
+
+.teams__indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-light-grey);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.teams__indicator:hover {
+  background: var(--color-grey);
+  transform: scale(1.2);
+}
+
+.teams__indicator--active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  transform: scale(1.3);
+}
+
+.teams__info {
+  margin-top: 30px;
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.teams__info-text {
+  font-size: 14px !important;
+  color: var(--color-text-light) !important;
+  line-height: 1.6 !important;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .teams__card {
+    max-width: 90%;
   }
-  50% {
-    transform: translate(0, 15px);
+
+  .teams__image {
+    height: 250px;
   }
-  100% {
-    transform: translate(0, -0px);
+
+  .teams__card-content {
+    padding: 15px !important;
+  }
+
+  .teams__nav-button {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .teams__nav-button--left {
+    left: 8px;
+  }
+
+  .teams__nav-button--right {
+    right: 8px;
+  }
+
+  .teams__company-name {
+    font-size: 16px !important;
+  }
+
+  .teams__description {
+    font-size: 13px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .teams__card {
+    max-width: 95%;
+  }
+
+  .teams__image {
+    height: 200px;
+  }
+
+  .teams__card-content {
+    padding: 12px !important;
+  }
+
+  .teams__nav-button {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .teams__company-name {
+    font-size: 15px !important;
+  }
+
+  .teams__description {
+    font-size: 12px !important;
   }
 }

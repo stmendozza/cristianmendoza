@@ -1,11 +1,22 @@
+import { lazy, Suspense } from "react";
 import Grid from "@mui/material/Grid";
+import { CircularProgress, Box } from "@mui/material";
 import Header from "../components/Header";
-import About from "../components/About";
-import Skills from "../components/Skills";
-import Experience from "../components/Experience";
-import Projects from "../components/Projects";
 import Title from "../components/Title";
-// import Menu from "../components/Menu";
+import Teams from "../components/Teams";
+
+// Lazy load heavy components
+const About = lazy(() => import("../components/About"));
+const Skills = lazy(() => import("../components/Skills"));
+const Experience = lazy(() => import("../components/Experience"));
+const Projects = lazy(() => import("../components/Projects"));
+
+// Loading component
+const LoadingSpinner = () => (
+  <Box display="flex" justifyContent="center" p={2}>
+    <CircularProgress size={24} />
+  </Box>
+);
 
 export default function Home() {
   return (
@@ -16,13 +27,23 @@ export default function Home() {
         </Grid>
         <Grid item xs={12} sm={12} md={6} style={{ margin: "0 auto" }}>
           <Title />
-          {/* <Menu /> */}
+          <Suspense fallback={<LoadingSpinner />}>
+            <About/>
+          </Suspense>
+          <Suspense fallback={<LoadingSpinner />}>
+            <Skills/>
+          </Suspense>
         </Grid>
         <Grid item xs={12} sm={12} md={6} style={{ margin: "0 auto" }}>
-          <About/>
-          <Skills/>
-          <Experience/>
-          <Projects/>
+          <Suspense fallback={<LoadingSpinner />}>
+            <Teams />
+          </Suspense>
+          <Suspense fallback={<LoadingSpinner />}>
+            <Experience/>
+          </Suspense>
+          <Suspense fallback={<LoadingSpinner />}>
+            <Projects/>
+          </Suspense>
         </Grid>
       </Grid>
     </>
