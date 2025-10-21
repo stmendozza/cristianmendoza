@@ -4,6 +4,7 @@ import { CircularProgress, Box } from "@mui/material";
 import Header from "../components/Header";
 import Title from "../components/Title";
 import Teams from "../components/Teams";
+import Footer from "../components/Footer";
 
 // Lazy load heavy components
 const About = lazy(() => import("../components/About"));
@@ -28,10 +29,10 @@ export default function Home() {
         <Grid item xs={12} sm={12} md={6} style={{ margin: "0 auto" }}>
           <Title />
           <Suspense fallback={<LoadingSpinner />}>
-            <About/>
+            <About />
           </Suspense>
           <Suspense fallback={<LoadingSpinner />}>
-            <Skills/>
+            <Skills />
           </Suspense>
         </Grid>
         <Grid item xs={12} sm={12} md={6} style={{ margin: "0 auto" }}>
@@ -39,13 +40,14 @@ export default function Home() {
             <Teams />
           </Suspense>
           <Suspense fallback={<LoadingSpinner />}>
-            <Experience/>
+            <Experience />
           </Suspense>
           <Suspense fallback={<LoadingSpinner />}>
-            <Projects/>
+            <Projects />
           </Suspense>
         </Grid>
       </Grid>
+      <Footer />
     </>
   );
 }
